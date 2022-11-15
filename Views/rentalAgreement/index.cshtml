@@ -1,0 +1,27 @@
+﻿@model instrumentRentals.Models.rentalAgreement
+
+
+@{
+    ViewData["Title"] = "View";
+}
+
+<h1>View</h1>
+
+<div>
+    <h4>Rental Agreement List</h4>
+    <hr />
+    <d1 class="row">
+        Rental Start Date: @Model.rentalStart
+    </d1>
+    <d2 class ="row">
+        Rented Instrument: @Model.instrument.name
+    </d2>
+    <d3 class="row">
+        Customer Information:  @Model.customer.firstName @Model.customer.lastName
+    </d3>
+</div>
+
+<div>
+    @Html.ActionLink("Edit", "Edit", new {/* id = Model.PrimaryKey */ })
+    <a asp-action ="Index">Back to List</a>
+</div>

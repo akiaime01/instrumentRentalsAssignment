@@ -1,0 +1,20 @@
+﻿@model instrumentRentals.Models.customer
+
+@{
+    ViewData["Title"] = "View";
+}
+
+<h1>View</h1>
+
+<div>
+    <h4>Customer List</h4>
+    <hr />
+    <d1 class="row">
+        Customer Info:  @Model.lastName, @Model.firstName
+    </d1>
+</div>
+
+<div>
+    @Html.ActionLink("Edit", "Edit", new {/* id = Model.PrimaryKey */ })
+    <a asp-action ="Index">Back to List</a>
+</div>
